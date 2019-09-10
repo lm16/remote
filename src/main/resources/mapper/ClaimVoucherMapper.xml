@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lm16.mapper.ClaimVoucherMapper">
+
+    <insert id="create" parameterType="ClaimVoucher" useGeneratedKeys="true">
+        insert into claim_voucher(next_deal_sn) values (#{nextDealSn})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from claim_voucher where id= #{id}
+    </delete>
+
+</mapper>
